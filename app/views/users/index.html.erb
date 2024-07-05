@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <div id="<%= dom_id user %>">
+      <p>
+        <strong>Name:</strong>
+        <%= user.name %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= user.email %>
+      </p>
+
+      <p>
+        <strong>Campaigns list:</strong>
+        <%= JSON.pretty_generate(user.campaigns_list) %>
+      </p>
+
+    </div>    
+  <% end %>
+</div>
+
+<%= link_to "New user", new_user_path %>
+
+<h2>Filter Users</h2>
+<%= form_with url: filter_users_path, method: :get, local: true do |form| %>
+  <%= form.text_field :campaign_names, placeholder: "Campaign Names (comma-separated)" %>
+  <%= form.submit "Filter" %>
+<% end %>
+
