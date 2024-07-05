@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# MyUser Application
 
-Things you may want to cover:
+## Description
+MyUser is a Ruby on Rails application that manages users and allows filtering based on campaign names. The application supports listing all users, adding new users, and filtering users by their associated campaign names.
 
-* Ruby version
+## Features
+- List all users
+- Add new user records
+- Filter users by campaign names
 
-* System dependencies
+## Prerequisites
+- Ruby 3.1.2
+- Rails 7.0.4
+- MySQL
 
-* Configuration
+## Setup and Running the Application Locally
 
-* Database creation
+### 1. Clone the Repository
 
-* Database initialization
+git clone <your-repo-url>
+cd myapp
 
-* How to run the test suite
+## Dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+sudo apt install git
+sudo apt install nodejs
+sudo apt install mysql-server
